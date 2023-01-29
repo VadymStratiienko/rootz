@@ -1,0 +1,179 @@
+@import "./common/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $beige;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid $ColorLine;
+  padding: 0 12px;
+  width: 100%;
+  height: 107px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover img {
+    opacity: 1;
+  }
+}
+.logo_title {
+  padding-left: 40px;
+  font-size: 30px;
+  color: $dark;
+}
+
+.flower {
+  position: absolute;
+  top: 40px;
+  left: 7px;
+  transform: rotate(-0.5turn);
+}
+.flower_2 {
+  position: absolute;
+  left: 6px;
+  top: 28px;
+}
+
+.flower_3 {
+  position: absolute;
+  top: 20.1px;
+}
+.flower_4 {
+  position: absolute;
+  left: -15px;
+  top: 40px;
+  transform: rotate(35deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+.flower_5 {
+  position: absolute;
+  left: -8px;
+  top: 28px;
+  transform: rotate(100deg);
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.navigate {
+  padding: 0;
+}
+
+@media screen and (max-width: $size-xl) {
+  .navigate {
+    display: none;
+  }
+}
+
+.navigate ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+
+.header_link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s;
+  color: $dark;
+  &:hover {
+    color: $LightCoral;
+  }
+}
+
+.btn_apply {
+  background-color: $white;
+  color: $dark;
+  border-radius: 40px;
+  padding: 12px 35px;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  transition: 0.3s;
+  &:hover {
+    background-color: $LightCoral;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: $size-xl) {
+  .btn_apply {
+    display: none;
+  }
+}
+@media screen and (min-width: $size-xl) {
+  .burger_menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $size-xl) {
+  .burger_menu {
+    z-index: 10;
+    transition: 0.3s;
+    cursor: pointer;
+    img {
+      width: 32px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.navbar_active,
+.navbar_inactive {
+  display: none;
+}
+
+@media screen and (max-width: $size-xl) {
+  .navbar_active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.5s;
+    z-index: 9;
+    background-color: $beige;
+    &::before {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+  }
+  .navbar_inactive {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.5s;
+    z-index: 9;
+  }
+}

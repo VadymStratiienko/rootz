@@ -1,0 +1,134 @@
+@import "./common/variables";
+
+.wrapper {
+  background-color: $LightSalmon;
+  border-radius: 20px;
+}
+
+.container_form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.grow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 104px;
+  * > {
+    padding: 0 12px;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: $size-md) {
+  .grow {
+    padding: 55px 18px;
+  }
+}
+
+@media screen and (min-width: $size-xl) {
+  .block_text {
+    width: 33.333333%;
+    flex: 0 0 auto;
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 56px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+  }
+}
+
+.block_form {
+  position: relative;
+  background-color: $beige;
+  border-radius: 16px;
+  width: 100%;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    margin: 0;
+  }
+
+  .vector_b {
+    position: absolute;
+    top: -5%;
+    right: -3%;
+  }
+  .vector_l {
+    position: absolute;
+    right: -5%;
+    top: 15%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 55px;
+  }
+  form input {
+    padding: 0 24px;
+    border-radius: 40px;
+    border: 0;
+    height: 48px;
+  }
+
+  form input + input {
+    margin: 16px 0;
+  }
+
+  form button {
+    background-color: LightCoral;
+    color: $white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 0;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.2px;
+    height: 48px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    &:hover {
+      background-color:$LightSalmon;
+    }
+  }
+}
+
+@media screen and (min-width: $size-xl) {
+  .block_form {
+    width: 33.333333%;
+    flex: 0 0 auto;
+  }
+}
+
+@media screen and (max-width: $size-xlg) {
+  .block_form {
+    position: relative;
+    margin-top: 55px;
+  }
+  .vector_l {
+    position: absolute;
+    right: -3%!important;
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: $size-md) {
+  .block_form form {
+    padding: 24px;
+  }
+}
